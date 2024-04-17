@@ -13,32 +13,7 @@ function App() {
         <Toaster />
       </div>
       <Navbar />
-      <Router>
-        <div>
-          <Routes>
-          <Route
-              exact
-              path="/"
-              element={<Viewdata table={"buyer"} />}
-            />
-            <Route
-              exact
-              path="/add_buyer"
-              element={<Add_agent table={"buyer"} />}
-            />
-            <Route
-              exact
-              path="/add_seller"
-              element={<Add_agent table={"seller"} />}
-            />
-            <Route
-              exact
-              path="/add_agent"
-              element={<Add_agent table={"agent"} />}
-            />
-          </Routes>
-        </div>
-      </Router>
+      
     </>
   );
 }
