@@ -11,6 +11,7 @@ import Add_property from "./pages/Add_property";
 import Home from "./pages/Home";
 import Add_property_details from "./pages/Add_propertydetails";
 import Add_transaction from "./pages/Add_transaction";
+import Erdiag from "./pages/Erdiag";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
@@ -23,6 +24,11 @@ root.render(
             exact
             path="/"
             element={<Home />}
+          />
+          <Route
+            exact
+            path="/ER"
+            element={<Erdiag />}
           />
           <Route
             exact
