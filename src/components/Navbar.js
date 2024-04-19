@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
-
+import { MdRealEstateAgent } from "react-icons/md";
 const Navbar = () => {
   const [insertNewDataMenuOpen, setInsertNewDataMenuOpen] = useState(false);
   const [viewDatabaseMenuOpen, setViewDatabaseMenuOpen] = useState(false);
@@ -17,8 +17,9 @@ const Navbar = () => {
     <nav className="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link to="" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-            DBMS
+          <MdRealEstateAgent className=' font-extrabold text-5xl'/>
+          <span className="self-center text-4xl font-semibold whitespace-nowrap dark:text-white">
+          EstateEase
           </span>
         </Link>
         <button

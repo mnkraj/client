@@ -4,8 +4,9 @@ import Add_agent from "./pages/Add_buyer";
 
 import Navbar from "./components/Navbar";
 import toast, { Toaster } from "react-hot-toast";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, BrowserRouter } from "react-router-dom";
 import Viewdata from "./pages/Viewdata";
+
 function App() {
   return (
     <>
@@ -13,6 +14,7 @@ function App() {
         <Toaster />
       </div>
       <Navbar />
+      
       
     </>
   );

@@ -6,6 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Viewdata from "./pages/Viewdata";
 import Navbar from "./components/Navbar";
+import { Contact } from "./pages/Contact";
 import Add_agent from "./pages/Add_buyer";
 import Add_property from "./pages/Add_property";
 import Home from "./pages/Home";
@@ -35,6 +36,7 @@ root.render(
             path="/view_buyer"
             element={<Viewdata table={"buyer"} />}
           />
+          <Route path="/contact" element={<Contact />} />
           <Route exact path="/add_property" element={<Add_property />} />
           <Route
             exact
