@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { Link } from "react-router-dom";
+import Navbar from "../components/Navbar";
 export default function Viewdata(p) {
   const [data, setdata] = useState("");
 
@@ -21,16 +22,19 @@ export default function Viewdata(p) {
     setdata(result);
     toast.remove();
     toast.success("Data Fetched Successfully ... ");
-    // console.log(result.fulldata);
-    // console.log(result.fields);
   };
 
   useEffect(() => {
     loaddata();
   }, [p.table]);
 
+  const openImageInNewTab = (imageUrl) => {
+    window.open(imageUrl, "_blank");
+  };
+
   return (
     <>
+    
       <section className="mx-auto w-full max-w-7xl px-4 py-4">
         <div className="flex flex-col space-y-4  md:flex-row md:items-center md:justify-between md:space-y-0">
           <div>
@@ -39,7 +43,7 @@ export default function Viewdata(p) {
           <div>
             <button
               type="button"
-              className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+              className="rounded-md bg-gray-900 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
             >
               <Link to={`/add_${p.table}`}>Add new {p.table}</Link>
             </button>
@@ -73,9 +77,23 @@ export default function Viewdata(p) {
                               key={colIndex}
                               className="whitespace-nowrap px-12 py-4"
                             >
-                              <div className="text-sm text-gray-900">
-                                {row[col.name]}
-                              </div>
+                              {col.name !== "imge_link" ? (
+                                <div className="text-sm text-gray-900">
+                                  {row[col.name]}
+                                </div>
+                              ) : (
+                                <button
+                                  type="button"
+                                  style={{ backgroundColor: "blue" }}
+                                  
+                                  className="rounded-md px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                                  onClick={() =>
+                                    openImageInNewTab(row[col.name])
+                                  }
+                                >
+                                  View Image
+                                </button>
+                              )}
                             </td>
                           ))}
                         </tr>

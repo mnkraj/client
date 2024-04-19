@@ -1,12 +1,11 @@
 import React from "react";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
+    <nav className="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700" >
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link to="" className="flex items-center space-x-3 rtl:space-x-reverse">
-          
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
             DBMS
           </span>
@@ -52,7 +51,7 @@ const Navbar = () => {
                 data-dropdown-toggle="dropdownNavbar1"
                 className="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
               >
-                Add Details{" "}
+                Insert New Data{" "}
                 <svg
                   className="w-2.5 h-2.5 ms-2.5"
                   aria-hidden="true"
@@ -102,6 +101,30 @@ const Navbar = () => {
                       Add Agent
                     </Link>
                   </li>
+                  <li>
+                    <Link
+                      to="/add_property"
+                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >
+                      Add Property
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/add_property_details"
+                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >
+                      Add Property Details
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/add_transaction"
+                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >
+                      Add Transaction
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </li>
@@ -111,7 +134,7 @@ const Navbar = () => {
                 data-dropdown-toggle="dropdownNavbar2"
                 className="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
               >
-                View Database {" "}
+                View Database{" "}
                 <svg
                   className="w-2.5 h-2.5 ms-2.5"
                   aria-hidden="true"
@@ -159,6 +182,30 @@ const Navbar = () => {
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                     >
                       View Agent table
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/view_property"
+                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >
+                      View Property table
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/view_property_details"
+                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >
+                      View Property Details
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/view_transaction"
+                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >
+                      View Transactions
                     </Link>
                   </li>
                 </ul>
