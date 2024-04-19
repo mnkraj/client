@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const [insertNewDataMenuOpen, setInsertNewDataMenuOpen] = useState(false);
+  const [viewDatabaseMenuOpen, setViewDatabaseMenuOpen] = useState(false);
+
+  const toggleInsertNewDataMenu = () => {
+    setInsertNewDataMenuOpen(!insertNewDataMenuOpen);
+  };
+
+  const toggleDatabaseMenu = () => {
+    setViewDatabaseMenuOpen(!viewDatabaseMenuOpen);
+  };
+
   return (
     <nav className="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -48,6 +59,7 @@ const Navbar = () => {
             <li>
               <button
                 id="dropdownNavbarLink1"
+                onClick={toggleInsertNewDataMenu}
                 data-dropdown-toggle="dropdownNavbar1"
                 className="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
               >
@@ -69,11 +81,11 @@ const Navbar = () => {
                 </svg>
               </button>
 
-              <div
-                id="dropdownNavbar1"
-                className="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+              {insertNewDataMenuOpen && <div
+                id="dropdownNavbar1" style={{position:"fixed"}}
+                className="z-10   font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
               >
-                <ul
+                <ul onClick={toggleInsertNewDataMenu}
                   className="py-2 text-sm text-gray-700 dark:text-gray-400"
                   aria-labelledby="dropdownNavbarLink1"
                 >
@@ -126,11 +138,12 @@ const Navbar = () => {
                     </Link>
                   </li>
                 </ul>
-              </div>
+              </div>}
             </li>
             <li>
               <button
                 id="dropdownNavbarLink2"
+                onClick={toggleDatabaseMenu}
                 data-dropdown-toggle="dropdownNavbar2"
                 className="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
               >
@@ -152,11 +165,13 @@ const Navbar = () => {
                 </svg>
               </button>
 
-              <div
+              {viewDatabaseMenuOpen && <div
                 id="dropdownNavbar2"
-                className="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+                style={{position:"fixed"}}
+                className="z-10 font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
               >
                 <ul
+                  onClick={toggleDatabaseMenu}
                   className="py-2 text-sm text-gray-700 dark:text-gray-400"
                   aria-labelledby="dropdownNavbarLink2"
                 >
@@ -209,7 +224,7 @@ const Navbar = () => {
                     </Link>
                   </li>
                 </ul>
-              </div>
+              </div>}
             </li>
             <li>
               <Link
