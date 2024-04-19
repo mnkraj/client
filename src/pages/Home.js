@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { TypeAnimation } from "react-type-animation";
 import real from './real.png'
-
+import Carousel from "../components/Carousel";
 const Home = () => {
   return (
     <section
@@ -12,16 +12,18 @@ const Home = () => {
       <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
         <div className="mr-auto place-self-center lg:col-span-7">
           <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl ">
-            <TypeAnimation
-              sequence={["Real Estate Database", 1000, "Real Estate Project" , 1000]}
+            EstateEase
+            
+          </h1>
+          <h3 className=" text-xl font-bold" style={{fontSize : "25px"}}><TypeAnimation
+              sequence={["Where innovation meets home" , 1000," Where innovation meets home" , 1000]}
               wrapper="span"
               speed={50}
               
               repeat={Infinity}
-            />
-          </h1>
-          <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl ">
-            <strong>DATABASE MANAGEMENT SYSTEM (CS1401)</strong>
+            /></h3>
+          <p className="max-w-2xl mb-7 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl ">
+            <strong> </strong>
           </p>
           <Link
             to="/view_buyer"
@@ -49,11 +51,12 @@ const Home = () => {
           </Link>
         </div>
         <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
-          <img
+          {/* <img
             src={real}
             alt="mockup" style={{height : "450px" , width : "600px"}
           }
-          />
+          /> */}
+          <Carousel />
         </div>
       </div>
     </section>

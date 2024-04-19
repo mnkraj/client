@@ -39,7 +39,7 @@ export default function Viewdata(p) {
       <section className="mx-auto w-full max-w-7xl px-4 py-4">
         <div className="flex flex-col space-y-4  md:flex-row md:items-center md:justify-between md:space-y-0">
           <div>
-            <h2 className="text-lg font-semibold">{p.table} Table </h2>
+            <h1 className="text-lg font-semibold"><strong>{p.table} Table</strong> </h1>
           </div>
           <div>
             <button
@@ -82,7 +82,7 @@ export default function Viewdata(p) {
                                 <div className="text-sm text-gray-900">
                                   {row[col.name]}
                                 </div>
-                              ) : (
+                              ) : (row[col.name] &&
                                 <button
                                   type="button"
                                   style={{ backgroundColor: "blue" }}

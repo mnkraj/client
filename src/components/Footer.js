@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="w-auto p-8">
             <a href="#">
               <div className="inline-flex items-center">
-                <MdRealEstateAgent className=" font-extrabold text-5xl" />
+                <MdRealEstateAgent className=" font-extrabold text-5xl text-blue-600" />
                 <span className="ml-4 text-lg font-bold">EstateEase</span>
               </div>
             </a>
