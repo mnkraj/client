@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { ArrowRight, ToggleLeft } from "lucide-react";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 const Add_property = (p) => {
   const [details, setdetails] = useState({
     prop_id: "",
@@ -170,6 +171,7 @@ const Add_property = (p) => {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 };

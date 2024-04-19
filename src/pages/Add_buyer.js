@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { ArrowRight } from "lucide-react";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 const Add_buyer = (p) => {
   const [details, setdetails] = useState({
     agent_id: "",
@@ -146,6 +147,7 @@ const Add_buyer = (p) => {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 };

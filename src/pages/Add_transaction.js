@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { ArrowRight } from "lucide-react";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 const Add_transaction = (p) => {
   const [details, setdetails] = useState({
     transaction_id: "",
@@ -228,6 +229,7 @@ const Add_transaction = (p) => {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 };

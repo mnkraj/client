@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 export default function Viewdata(p) {
   const [data, setdata] = useState("");
 
@@ -105,6 +106,7 @@ export default function Viewdata(p) {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 }
