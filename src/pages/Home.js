@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { TypeAnimation } from "react-type-animation";
-import Contact from './Contact';
+import real from './real.png'
+
 const Home = () => {
   return (
     <section
@@ -49,8 +50,9 @@ const Home = () => {
         </div>
         <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
           <img
-            src="https://upload.wikimedia.org/wikipedia/en/7/7d/National_Institute_of_Technology%2C_Jamshedpur_Logo.png"
-            alt="mockup" style={{height : "520px" , width : "530px"}}
+            src={real}
+            alt="mockup" style={{height : "450px" , width : "600px"}
+          }
           />
         </div>
       </div>
