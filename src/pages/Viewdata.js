@@ -36,7 +36,7 @@ export default function Viewdata(p) {
   return (
     <>
     
-      <section className="mx-auto w-full max-w-7xl px-4 py-4">
+      <section className="mx-auto w-full max-w-7xl px-4 py-4" style={{minHeight : "77vh"}}>
         <div className="flex flex-col space-y-4  md:flex-row md:items-center md:justify-between md:space-y-0">
           <div>
             <h1 className="text-lg font-semibold"><strong>{p.table} Table</strong> </h1>
@@ -54,7 +54,7 @@ export default function Viewdata(p) {
           <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
             <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
               <div className="overflow-hidden border border-gray-200 md:rounded-lg">
-                <table className="min-w-full divide-y divide-gray-200">
+                <table className="min-w-full divide-y divide-gray-200 min-h-[80vhd]" >
                   <thead className="bg-gray-50">
                     <tr>
                       {data.fields &&
