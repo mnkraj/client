@@ -3,6 +3,7 @@ import toast, { Toaster } from "react-hot-toast";
 import { ArrowRight } from "lucide-react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+
 const Add_buyer = (p) => {
   const [details, setdetails] = useState({
     agent_id: "",
@@ -16,7 +17,6 @@ const Add_buyer = (p) => {
   };
 
   const handleSubmit = async (e) => {
-    //setLoading(true);
     e.preventDefault();
     toast.loading("Loading ... Please Wait ...");
     const response = await fetch("http://localhost:4000/api/v1/add_buyer", {
@@ -37,14 +37,13 @@ const Add_buyer = (p) => {
     toast.remove();
     if (!result.success) toast.error(result.message);
     else toast.success(result.message);
-    //window.location.reload()
   };
+
   return (
-    <>
-      
-      <section className="bg-black/80">
-        <div className="flex items-center justify-center bg-white px-4 py-10 sm:px-6 sm:py-16 lg:px-8">
-          <div className="xl:mx-auto xl:w-full xl:max-w-sm 2xl:max-w-md">
+    <div >
+      <section className="bg-black/80" >
+        <div className="flex items-center justify-center px-4 py-10 sm:px-6 sm:py-16 lg:px-8" style={{ backgroundColor: "darkgrey" }}>
+          <div className="mx-auto w-full bg-white max-w-sm md:max-w-md" style={{padding : "20px" , borderRadius: "4%" }} >
             <div className="mb-2"></div>
             <h2 className="text-2xl font-bold leading-tight text-black">
               Add {p.table}
@@ -59,7 +58,6 @@ const Add_buyer = (p) => {
                     htmlFor="agentid"
                     className="text-base font-medium text-gray-900"
                   >
-                    {" "}
                     {p.table} Id
                   </label>
                   <div className="mt-2">
@@ -71,7 +69,7 @@ const Add_buyer = (p) => {
                       name="agent_id"
                       maxLength={8}
                       onChange={handleChange}
-                    ></input>
+                    />
                   </div>
                 </div>
                 <div>
@@ -79,8 +77,7 @@ const Add_buyer = (p) => {
                     htmlFor="name"
                     className="text-base font-medium text-gray-900"
                   >
-                    {" "}
-                    Full Name{" "}
+                    Full Name
                   </label>
                   <div className="mt-2">
                     <input
@@ -91,7 +88,7 @@ const Add_buyer = (p) => {
                       onChange={handleChange}
                       name="name"
                       maxLength={30}
-                    ></input>
+                    />
                   </div>
                 </div>
                 <div>
@@ -99,8 +96,7 @@ const Add_buyer = (p) => {
                     htmlFor="email"
                     className="text-base font-medium text-gray-900"
                   >
-                    {" "}
-                    Email address{" "}
+                    Email address
                   </label>
                   <div className="mt-2">
                     <input
@@ -110,7 +106,7 @@ const Add_buyer = (p) => {
                       id="email"
                       onChange={handleChange}
                       name="email"
-                    ></input>
+                    />
                   </div>
                 </div>
                 <div>
@@ -119,8 +115,7 @@ const Add_buyer = (p) => {
                       htmlFor="password"
                       className="text-base font-medium text-gray-900"
                     >
-                      {" "}
-                      Phone Number{" "}
+                      Phone Number
                     </label>
                   </div>
                   <div className="mt-2">
@@ -131,7 +126,7 @@ const Add_buyer = (p) => {
                       onChange={handleChange}
                       id="password"
                       name="phone_number"
-                    ></input>
+                    />
                   </div>
                 </div>
                 <div>
@@ -148,7 +143,7 @@ const Add_buyer = (p) => {
         </div>
       </section>
       <Footer />
-    </>
+    </div>
   );
 };
 

@@ -148,7 +148,7 @@ export function Contact() {
         </div>
       </div>
       {/* Address */}
-      <div className="rounded-lg bg-gray-100">
+      <div className="rounded-lg bg-gray-100" style={{backgroundColor : "darkgrey"}}>
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="py-20">
             <div className="grid grid-cols-1 gap-x-20 gap-y-8 lg:grid-cols-2">

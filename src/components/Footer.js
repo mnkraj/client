@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { MdRealEstateAgent } from "react-icons/md";
 const Footer = () => {
   return (
-    <section className="relative overflow-hidden bg-white py-8" >
+    <section className="relative overflow-hidden bg-white py-8" style={{backgroundColor : "darkgrey"}} >
       <div className="container relative z-10 mx-auto px-4">
         <div className="-m-8 flex flex-wrap items-center justify-between">
           <div className="w-auto p-8">
